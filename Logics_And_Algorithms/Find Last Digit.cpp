@@ -1,3 +1,4 @@
+// Find Last Digit of a Number raised to a Power
 #include<iostream>
 using namespace std;
 int main(){
