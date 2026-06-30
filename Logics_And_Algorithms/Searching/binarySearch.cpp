@@ -3,15 +3,12 @@
 #include <cstdlib>
 using namespace std;
 int binarySearch(int arr[],int n,int f) {
-	int low = 0,high = n-1;
-	while(low <= high) {
-		int mid = (low+high)/2;
-		if(arr[mid] == f)
-			return mid;
-		else if(f < arr[mid])
-			high = mid-1;
-		else
-			low = mid+1;
+	int low = 0, high = n - 1;
+	if(low <= high){
+		int mid = low + (high - low) / 2;
+		if (arr[mid]==f) return mid;
+		else if(arr[mid] < f) high = mid - 1;
+		else low = mid + 1;
 	}
 	return -1;
 }
